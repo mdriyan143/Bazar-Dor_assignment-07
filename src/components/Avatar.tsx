@@ -1,5 +1,6 @@
+"use client";
 
-import Image from "next/image";
+import { useState } from "react";
 
 interface AvatarProps {
   name?: string | null;
@@ -8,22 +9,23 @@ interface AvatarProps {
 }
 
 const Avatar = ({ name, image, size = 36 }: AvatarProps) => {
+  const [failed, setFailed] = useState(false);
   const initial = (name?.trim()?.[0] ?? "?").toUpperCase();
 
-  if (image) {
+    if (image && !failed) {
     return (
-      <Image
+      <img
         src={image}
         alt={name ?? "ব্যবহারকারী"}
         width={size}
         height={size}
         referrerPolicy="no-referrer"
+        onError={() => setFailed(true)}
         className="shrink-0 rounded-lg object-cover"
         style={{ width: size, height: size }}
       />
     );
   }
-
   return (
     <span
       className="bg-primary/10 text-primary grid shrink-0 place-items-center rounded-lg font-bold"
