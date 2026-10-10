@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ProductGrid from "@/components/ProductGrid";
+import CategoryProducts from "@/components/CategoryProducts";
 import NotFoundView from "@/components/NotFoundView";
 import { getCategory, getProducts } from "@/lib/api";
 import { toBn } from "@/lib/format";
@@ -27,8 +27,7 @@ export default async function CategoryPage({ params }: Props) {
     return (
       <NotFoundView
         title="এই বিভাগে কোনো পণ্য নেই"
-        message="এই মুহূর্তে এই বিভাগে দেখানোর মতো কোনো পণ্য পাওয়া যায়নি।"
-      />
+        message="এই মুহূর্তে এই বিভাগে দেখানোর মতো কোনো পণ্য পাওয়া যায়নি।"/>
     );
   }
 
@@ -46,11 +45,7 @@ export default async function CategoryPage({ params }: Props) {
         </div>
       </div>
 
-      <p className="text-muted mt-6 mb-4 text-sm">
-        মোট {toBn(products.length)}টি পণ্য দেখানো হচ্ছে
-      </p>
-
-      <ProductGrid products={products} />
+      <CategoryProducts products={products} />
     </div>
   );
 }
