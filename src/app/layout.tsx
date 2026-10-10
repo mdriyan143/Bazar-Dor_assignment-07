@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Bengali } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PriceTicker from "@/components/PriceTicker";
 import "./globals.css";
@@ -33,6 +34,7 @@ export default function RootLayout({
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
           {children}
         </main>
+        <Footer />
         <Toaster position="top-center" />
       </body>
     </html>
