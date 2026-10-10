@@ -2,6 +2,12 @@
 
 **বাজার দর (BazarDor)** is a responsive Bangla market-price website that helps users explore everyday products, compare prices, and view market-wise price information in one place.
 
+
+## 🚀 Live Demo : **[BazarDor](https://bazar-dor-mdriyan143.vercel.app/)**
+
+ 📂 GitHub Repository : **[GitHub Repository](https://github.com/mdriyan143/Bazar-Dor_assignment-07)**
+
+
 ## ✨ Key Features
 
 1. **Product listings** — Browse everyday market products with prices, units, and price-change indicators.
