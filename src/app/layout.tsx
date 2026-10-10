@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="bn" data-theme="bazar" className={notoSansBengali.className}>
+    <html lang="bn" data-theme="bazar" data-scroll-behavior="smooth" className={notoSansBengali.className}>
       <body className="flex min-h-screen flex-col antialiased">
         <Header />
         <PriceTicker />
