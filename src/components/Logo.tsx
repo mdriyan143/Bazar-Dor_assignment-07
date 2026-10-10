@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { banglaDate } from "@/lib/format";
 
+
 const Logo = () => (
   <Link href="/" className="flex items-center gap-3" aria-label="বাজার দর - হোম">
     <span className="bg-primary grid size-10 place-items-center rounded-xl">
