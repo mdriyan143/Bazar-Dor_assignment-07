@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# বাজার দর | BazarDor
 
-## Getting Started
+**বাজার দর (BazarDor)** is a responsive Bangla market-price website that helps users explore everyday products, compare prices, and view market-wise price information in one place.
 
-First, run the development server:
+## ✨ Key Features
+
+1. **Product listings** — Browse everyday market products with prices, units, and price-change indicators.
+2. **Price trends** — Quickly explore products whose prices have increased or decreased.
+3. **Product details** — View price summaries and market-wise prices for individual products.
+4. **Category browsing and sorting** — Browse products by category and sort prices from low to high or high to low.
+5. **Authentication** — Sign up and sign in using email/password, Google, or GitHub with Better Auth.
+6. **Profile management** — View your profile and update your name.
+7. **Responsive design** — Use the website on mobile, tablet, and desktop.
+8. **Loading and error states** — Includes loading skeletons and friendly not-found pages.
+
+## 🛠️ Technologies Used
+
+- **Next.js 16** — App Router and application routing
+- **React 19** — UI components
+- **TypeScript** — Type-safe development
+- **Tailwind CSS 4** — Styling and responsive layouts
+- **DaisyUI 5** — UI styling utilities and theme support
+- **Better Auth** — Email/password and social authentication
+- **MongoDB** — Authentication data storage
+- **React Hot Toast** — Success and error notifications
+- **React Icons** — Icons
+- **BazarDor API** — Product and category data
+
+## 🚀 Getting Started
+
+### Requirements
+
+- Node.js (compatible with your installed Next.js version)
+- npm
+- A MongoDB database for authentication
+
+### 1. Clone the repository
+
+```bash
+git clone <your-github-repository-url>
+cd Bazar-Dor_assignment-07-main
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env.local` file in the project root:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+MONGODB_DB=bazar-dor
+BETTER_AUTH_URL=http://localhost:3000
+BETTER_AUTH_SECRET=your_long_random_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+API_BASE_URL=https://api.api-store.workers.dev/api/bazardor
+API_BASE_URL_FALLBACK=https://api.abcz.workers.dev/api/bazardor
+```
+
+Replace the example values with your own credentials. Configure Google and GitHub OAuth callback URLs in their provider dashboards to match your Better Auth setup. Never commit `.env.local` or real secrets to GitHub.
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📡 Product API
 
-To learn more about Next.js, take a look at the following resources:
+The application uses the BazarDor API for product and category information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Primary API: `https://openapi.programming-hero.com/api/bazardor`
+- Fallback API: `https://api.abcz.workers.dev/api/bazardor`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Available endpoints include:
 
-## Deploy on Vercel
+- `GET /products` — list products
+- `GET /products?category=chal` — filter products by category
+- `GET /products/1` — retrieve a product
+- `GET /categories` — list categories
+- `GET /categories/chal` — retrieve a category
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Main Routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Route | Description |
+|---|---|
+| `/` | Homepage and product listings |
+| `/category/[slug]` | Products in a category with price sorting |
+| `/product/[slug]` | Product details and market prices |
+| `/signin` | Sign-in page |
+| `/signup` | Registration page |
+| `/profile` | User profile |
+| `/profile/update` | Update profile information |
+
+## 📱 Responsive Experience
+
+The interface is designed to adapt to mobile, tablet, and desktop screens.
+
+## 🔐 Environment and Security Notes
+
+- Keep `.env.local` private and do not push secrets to your repository.
+- Use a strong, unique `BETTER_AUTH_SECRET`.
+- Set the correct production `BETTER_AUTH_URL` and OAuth callback URLs before deployment.
+
+## 👤 Project
+
+**Project name:** বাজার দর | BazarDor  
+**Description:** প্রয়োজনীয় পণ্যের দৈনিক বাজার দর এক নজরে।
+
+---
+
+*Market prices are indicative and may change depending on market conditions.*

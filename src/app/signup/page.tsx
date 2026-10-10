@@ -103,7 +103,7 @@ export default function SignUpPage() {
         </div>
 
         {error && (
-          <p role="alert" className="text-up bg-up/10 rounded-lg px-3 py-2 text-sm">
+          <p role="alert" className="text-error bg-error/10 rounded-lg px-3 py-2 text-sm">
             {error}
           </p>
         )}

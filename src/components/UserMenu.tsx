@@ -95,7 +95,7 @@ const UserMenu = () => {
               type="button"
               role="menuitem"
               onClick={handleSignOut}
-              className="text-up hover:bg-up/10 flex items-center gap-2 rounded-lg px-2 py-2 text-left"
+              className="text-error bg-error/10 flex items-center gap-2 rounded-lg px-2 py-2 text-left"
             >
               <FiLogOut /> সাইন আউট
             </button>
