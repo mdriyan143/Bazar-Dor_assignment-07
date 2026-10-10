@@ -37,8 +37,9 @@
 }
 
 @theme {
-  --color-up: #c62828;
-  --color-down: #0f8a46;
+  
+  --color-up:#0f8a46;
+  --color-down: #c62828;
   --color-muted: #66756b;
   --color-line: #e2e9e1;
 }

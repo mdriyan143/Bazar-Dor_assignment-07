@@ -1,7 +1,7 @@
 import type { Category, Product } from "@/types";
 
 const PRIMARY =
-  process.env.API_BASE_URL ?? "https://api.api-store.workers.dev/api/bazardor";
+  process.env.API_BASE_URL ?? "https://openapi.programming-hero.com/api/bazardor";
 const FALLBACK =
   process.env.API_BASE_URL_FALLBACK ?? "https://api.abcz.workers.dev/api/bazardor";
 
